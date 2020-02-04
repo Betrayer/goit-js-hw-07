@@ -40,11 +40,31 @@
       </li>
     </ul>
     <ul id="ingredients"></ul>
-    <style></style>
+    <style>
+      #gallery {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        display: flex;
+        justify-content: space-around;
+      }
+      img {
+        width: 400px;
+        height: 100%;
+      }
+    </style>
     <ul id="gallery"></ul>
+    <div id="counter">
+      <button type="button" data-action="decrement">-1</button>
+      <span id="value">0</span>
+      <button type="button" data-action="increment">+1</button>
+    </div>
+    <input type="text" placeholder="Ваше имя?" id="name-input" />
+    <h1>Привет, <span id="name-output">незнакомец</span>!</h1>
     <!-- <script type="module" src="/goit-js-hw-07/src/task-01.js"></script> -->
     <!-- <script type="module" src="/goit-js-hw-07/src/task-02.js"></script> -->
     <!-- <script type="module" src="/goit-js-hw-07/src/task-03.js"></script> -->
-    <script type="module" src="/goit-js-hw-07/src/task-04.js"></script>
+    <!-- <script type="module" src="/goit-js-hw-07/src/task-04.js"></script> -->
+    <script type="module" src="/goit-js-hw-07/src/task-05.js"></script>
   </body>
 </html>
