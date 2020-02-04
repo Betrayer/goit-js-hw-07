@@ -7,7 +7,8 @@ console.log(`В списке ${itemsAmount.length} категории`);
 const transform = Array.from(itemsAmount);
 
 transform.forEach(header => {
-  console.log(header.querySelector("h2").textContent);
+  console.log(`Категория: ${header.querySelector("h2").textContent}`);
+  console.log(
+    `Количество элементов: ${header.querySelector("ul").children.length}`
+  );
 });
-
-const smth = transform.map()

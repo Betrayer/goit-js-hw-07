@@ -20,8 +20,6 @@ const images = [
 
 const element = document.querySelector("#gallery");
 
-const fragment = document.createDocumentFragment();
-
 images.forEach(imgArr => {
   element.insertAdjacentHTML(
     "afterbegin",
