@@ -18,13 +18,23 @@ const images = [
   }
 ];
 
-const fragment = document.createDocumentFragment();
-const element = document.querySelector("#gallery");
+// const fragment = document.createDocumentFragment();
+// const element = document.querySelector("#gallery");
 
-images.forEach(imgArr => {
-  element.insertAdjacentHTML(
-    "afterbegin",
-    `<li><img src=${imgArr.url} alt=${imgArr.alt}></img></li>`
-  );
-});
-element.appendChild(fragment);
+// images.forEach(imgArr => {
+//   element.insertAdjacentHTML(
+//     "afterbegin",
+//     `<li><img src=${imgArr.url} alt=${imgArr.alt}></img></li>`
+//   );
+// });
+// element.appendChild(fragment);
+
+const element = document.querySelector("#gallery");
+const fragment = document.createDocumentFragment();
+
+const imgList = images.reduce(
+  (acc, imgArr) => acc + `<li><img src =${imgArr.url} alt=${imgArr.alt}</li>`,
+  ""
+);
+
+element.insertAdjacentHTML("afterbegin", imgList);
