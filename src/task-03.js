@@ -18,6 +18,7 @@ const images = [
   }
 ];
 
+const fragment = document.createDocumentFragment();
 const element = document.querySelector("#gallery");
 
 images.forEach(imgArr => {
@@ -26,3 +27,4 @@ images.forEach(imgArr => {
     `<li><img src=${imgArr.url} alt=${imgArr.alt}></img></li>`
   );
 });
+element.appendChild(fragment);
